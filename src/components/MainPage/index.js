@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 function MainPage({ setUserList }) {
-  const [boy, setBoy] = useState('');
-  const [girl, setGirl] = useState('');
+  const [boyName, setBoy] = useState('');
+  const [girlName, setGirl] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -14,10 +14,10 @@ function MainPage({ setUserList }) {
     setLoading(true);  // Start loading
 
     const id = uuidv4();
-    const formData = { id, boy, girl };
+    const formData = { id, boyName, girlName };
 
     try {
-      const response = await fetch('https://firstbackenddeployment-5z8y.onrender.com/name', {
+      const response = await fetch('https://user-management-api-vishnu.onrender.com/api/love/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -49,7 +49,7 @@ function MainPage({ setUserList }) {
         <input
           type="text"
           placeholder="Boy's Name"
-          value={boy}
+          value={boyName}
           onChange={(e) => setBoy(e.target.value)}
           required
         />
@@ -57,7 +57,7 @@ function MainPage({ setUserList }) {
         <input
           type="text"
           placeholder="Girl's Name"
-          value={girl}
+          value={girlName}
           onChange={(e) => setGirl(e.target.value)}
           required
         />

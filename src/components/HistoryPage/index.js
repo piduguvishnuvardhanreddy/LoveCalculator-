@@ -23,8 +23,8 @@ function History({ userList, setUserList }) {
         <tbody>
           {userList.map((user) => (
             <tr key={user.id}>
-              <td>{user.boy}</td>
-              <td>{user.girl}</td>
+              <td>{user.boyName}</td>
+              <td>{user.girlName}</td>
               <td>
                 <button
                   onClick={() => handleDelete(user.id)}
