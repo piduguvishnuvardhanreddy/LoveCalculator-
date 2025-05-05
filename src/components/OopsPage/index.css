@@ -1,0 +1,33 @@
+/* Oops Page Styling */
+.oops-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb9, #ff65a3);
+    color: white;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .go-back-button {
+    padding: 10px 20px;
+    background-color: #ff65a3;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-back-button:hover {
+    background-color: #ff3f7f;
+  }
+  

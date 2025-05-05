@@ -1,0 +1,113 @@
+.history-container {
+    padding: 40px 20px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .history-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .history-table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .history-table th,
+  .history-table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .history-table th {
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .history-table tr:hover {
+    background-color: #ffe0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-top: 6px solid #ff69b4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-top: 40px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .history-heading {
+      font-size: 2rem;
+    }
+  
+    .history-table th,
+    .history-table td {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  .history-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #ff6b81;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .delete-button:hover {
+    transform: scale(1.2);
+  }
+  
