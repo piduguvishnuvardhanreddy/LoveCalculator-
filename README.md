@@ -68,3 +68,111 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# ✅ React Project Prompt Template for Future Projects
+
+## 🎯 Project Objective
+Build a multi-page React.js application with interactive UI, smooth animations, and strict responsive design, using only **CSS (no Tailwind, no Bootstrap)**.
+
+---
+
+## 🔧 Technologies & Tools to Use
+- **React.js**
+- **React Router DOM**
+- **UUID (for unique IDs)**
+- **LocalStorage** (for temporary data storage)
+- **CSS only** (flexbox + media queries + transitions + keyframe animations)
+- **Vite or Create React App**
+- **VS Code** as the editor
+
+---
+
+## 📁 Project Structure Guidelines
+
+Use the following structure for each component:
+
+```
+src/
+  components/
+    ComponentName/
+      index.js       // Functional Component
+      index.css      // Styles scoped to this component
+```
+
+**Top-level files:**
+```
+App.js             // Main routes & navigation
+index.css          // Reset/global styles (if needed)
+main.jsx           // ReactDOM.render + BrowserRouter
+```
+
+---
+
+## 🧭 Component Naming Convention
+
+- Main page: `MainPage`
+- Navigation bar: `Nav`
+- Calculation/Result page: `LoveCalculationsPage`
+- Error page: `OopsPage`
+- Reusable or route-specific components follow PascalCase
+
+---
+
+## 🎨 Styling Requirements
+
+1. Use **gradient backgrounds** with **dark and light tones**
+2. Animate backgrounds using `@keyframes gradientShift`
+3. Use **CSS-only animations and transitions** for:
+   - Button hover effects
+   - Text glow/pulse
+   - Loading spinners
+4. Make sure the design works across **5 breakpoints**:
+   - `>1200px`, `992px`, `768px`, `576px`, `400px`
+5. Use **only flexbox and media queries** — no CSS frameworks.
+
+---
+
+## 💾 Functionality Requirements
+
+- Submit forms using `fetch` POST
+- Store form data locally using `useState` + `localStorage`
+- On success, redirect to the result page
+- On error, redirect to the Oops page
+- Add loader while waiting for fetch response
+
+---
+
+## 💡 Reusable Features to Implement
+
+- Gradient animated backgrounds
+- Animated text (e.g., glowing %, rotating icons)
+- Smooth form transitions
+- Reusable `Loader` component (CSS-based)
+
+---
+
+## 📌 Sample Form Logic
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+const id = uuidv4();
+const formData = { id, field1, field2 };
+
+const response = await fetch('/api-endpoint', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
+```
+
+---
+
+## ✅ Next Steps
+
+1. Create the folder/component structure
+2. Setup routing and `Nav`
+3. Build `MainPage` with form and loader
+4. Build `LoveCalculationsPage` or equivalent with gradient animation
+5. Add responsive design with attractive UI
+6. Test responsiveness and flows
