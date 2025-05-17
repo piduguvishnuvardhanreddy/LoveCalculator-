@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.css';  // Ensure correct import for styles
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { Helmet } from 'react-helmet';
 
 function MainPage({ setUserList }) {
   const [boyName, setBoy] = useState('');
@@ -44,7 +45,20 @@ function MainPage({ setUserList }) {
           <div className="loader"></div>
         </div>
       )}
+      <Helmet>
+        <title>Love Calculator | Fun & Free Love Percentage Tool</title>
+        <meta name="description" content="Try our fun and free Love Calculator to find the love percentage between two names! Simple, instant, and entertaining." />
+        <meta name="keywords" content="love calculator, love percentage, name match, romantic compatibility test" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Love Calculator" />
+        <meta property="og:description" content="Check your love percentage based on names instantly!" />
+        <meta property="og:url" content="https://love-calculator-gold.vercel.app/" />
+      </Helmet>
       <h1 className="heading">Love Calculator</h1>
+      <p>
+        Welcome to our Love Calculator – a fun and free tool to check the love percentage between two names. Just enter your names and get an instant love compatibility score. Perfect for fun, friends, and Valentine's Day surprises!
+      </p>
+
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
